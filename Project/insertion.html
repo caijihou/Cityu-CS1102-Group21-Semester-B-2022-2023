@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insection Sort</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Project.css">
+</head>
+<body>
+    <h1 class="cherry">Insection Sort</h1>
+    <div id = "di">
+            <h2 class="cherry">The performance of insertion sort is well among other elementary sorting algorithms. Let n be a set of numbers, both the worst case and the average case time of insertion sort are O(n^2). (Ganapathi & Chowdhury, 2021)</br>
+            The way of insertion sort performs is like this. The first item needs no action, the second item will be compared to the first item, it will check whether is larger or smaller than the first item. When it is larger than the first item, it will stay after the first item, if not, it will be inserted to the place before the first item. When the third item is input, it will first compare to the largest item, if it is larger than that, it will stay in the last, if not, it will be compared to the second largest item, if it is larger, it will be inserted after the second largest item, if not, it will be compared to the smallest item, if it is larger, it will be inserted after the smallest item, if not, it will be inserted before the smallest item. If there are n numbers are sorted in ascending order, the new number will first compare to the n^th item first, then the n-1^th, then the n-2^th item, then the n-3^th items until it found an item larger than the inserted data.</h2>
+            <h2 class="cherry">For example, there is a set of data [10, 8, 11, 7, 4, 12, 9, 6, 5, 3]</h2>
+            <h2 class="cherry">The first step is input 10 and no further action will be taken. [10]</br>
+            The second step is comparing 8 and 10, as 8 &lt; 10, 8 will be inserted before 10. [8, 10]</br>
+            The third step is comparing 11 and 10, as 11 &lt; 10, it will be placed at the last [8, 10, 11]</br>
+            The fourth step is comparing 7 and 11, 7 &lt; 11, so 7 will be compared to 10, 7 &lt; 10, then 7 will be compared to 8, 7 &lt; 8, 7 will be inserted before 8. [7, 8, 10, 11]</br>
+            After all the steps, the final list will become [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</br>
+            </h2>
+            <img class="jessie" src="Insertion1.jpg"/>
+            <h2  class="cherry">The above code is written in C interpreter performing insertion sort function.
+                In line 1, the function insertion_sort is created, a[] is the set of data, n is the length or the number of item in the set of data.</br>
+                In line 2, the data input is printed.</br>
+                In line 3, for loop is created, i = 1 but not 0, as the first item input needs no further action taken, so it can be started by 1. i represents the new item that started to compare with the existing sorted set of data. When is smaller than the length of set, the loop continues, after the loop is done once, i will be increased by 1. When i = n, that means all the items are compared and sorted well.</br>
+                In line 4, the int key is defined, a[i] is the item that we want to compare with the set of data.</br>
+                In line 5, the int j is defined as the item before the item that is under the process of comparison. (As the item need to be compared to the item before it)</br>
+                In line 6, a while loop is created, the condition is while j >= 0, which means when there is an item before the item need comparison. The second condition is while a[j] > key, which means the items before the unsorted item is larger than the unsorted item. The loop only continues when both conditions are satisfied.</br>
+                In line 7, when the conditions are satisfied, the item which is larger than the unsorted item but it stay before the unsorted item will be moved one place after, which means after the unsorted item. </br>
+                In line 8, when the move completed, the unsorted item need to be compared with the item before it, so j need to minus 1.</br>
+                In line 10, we have to put the key in the correct place (order), a[j+1] is because the j -- in the previous line.</br>
+                In line 11, we print out the set of data.</br></h2>>
+            <img class="jessie" src="Insertion2.jpg"/>
+            <h2 class="cherry">So we input a set of data [10, 8, 11, 7, 4, 12, 9, 6, 5, 3] and the length is 10, and execute the insertion_sort function defined before.</h2>
+            <img class="jessie" src="Insertion3.jpg"/>
+            <h2 class="cherry">And this is the code for printing out the data during sorting. When the above codes are executed</h2>
+            <img class="jessie" src="Insertion4.jpg"/>
+            <h2 class="cherry">Reference:</br>Ganapathi, P., & Chowdhury, R. (2021). Parallel Divide-and-Conquer Algorithms for</br> Bubble Sort, Selection Sort and Insertion Sort. The Computer Journal. </br>https://doi.org/10.1093/comjnl/bxab107</h2>  
+    </div>
+
+</body>
+
+<footer>
+        We've upload our codes to GitHub:<a href="https://github.com/caijihou/Cityu-CS1102-Group21">https://github.com/caijihou/Cityu-CS1102-Group21</a></br>
+        Members:</br>
+        Tsang Yee Ki Cherry (55684550)</br>
+        Ng tsz ying (56746486)</br>
+        ZHANG Jianyuan (57855500)</br>
+        LAI Wing Lok (57142166)</br>
+</footer>
+
+</html>

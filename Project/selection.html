@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selection Sort</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Project.css">
+</head>
+<body>
+
+<h1 class="cherry">Selection Sort</h1>
+<div id="kun">
+<h2 class="cherry">Similar to insertion sort, the time complexity is also O(n^2). However, it is less stable compared to insertion sort (Ganapathi & Chowdhury, 2021). As it involves a large step of movement (swapping) during the process of sorting. It is not only swap with the data near the unsorted data, but it may also swap between the first and the 15th data. Therefore, it is not that stable. In addition, it may change the relative order of some data, for example, [5, 3, 3, 8, 9], after selection sort, it become [3, 3, 5, 8, 9], but two 3 may swap their position after sorting, so the relative order may be different and thus affect the stability.</h2>
+<h2 class="cherry">The way of selection sort perform is like this. (Ascending order)
+    For a set of data, it will assume the first data be the smallest data, then compare it with the second data, if the second data is smaller than the first data, the second data will be assumed as the smallest data, then it will be compared with the third data, if the third data is larger than the second data, the second data will continue to compare with the fourth data until the smallest data is really found. They will loop until all the data is sorted.
+</h2>
+<h2 class="cherry">
+    For example, given a set of data [9, 5, 2, 7, 12, 4]
+First step is that it will assume 9 as the smallest data first, then compare it with the second data 5, it is found that 5 &lt; 9, so now 5 is assumed to be the smallest data, 5 will then be compared to 2, as 2 &lt; 5, so now 2 is assumed to be the smallest data, 2 will then be compared to 7, as 2 &lt; 7, 2 will then be compared to 12, as 2 &lt; 12, 2 will then be compared to 4, as 2 &lt; 4, and no more data can used to compared, 2 is the smallest number in the set of data. So 2 and 9 will swap the order and 2 become the first sorted data. </br>
+Sorted data:[2] Unsorted data: [5, 9, 7, 12, 4]
+</h2>    
+<h2 class="cherry">
+    Second step is that it will assume 5 as the smallest data first, then compare it with the second data 5, it is found that 5 &lt; 9, 5 will then be compared to 7, as 5 &lt; 7, 5 will then be compared to 12, as 5 &lt; 12, 5 will then be compared to 4, as 5 &gt; 4, so now 4 is assumed to be the smallest number and no more data can used to compared. So 4 and 5 will swap the order and 4 becomes the second sorted data. </br>
+Sorted data [2, 4] Unsorted data [9, 7, 12, 5]
+</h2>
+<h2 class="cherry">
+    Third step: sorted data [2, 4, 5] unsorted data [7, 12, 9]</br>
+    Fourth step: sorted data [2, 4, 5, 7] unsorted data [12, 9]</br>
+    Fifth step: sorted data [2, 4, 5, 7, 9] unsorted data [12]</br>
+    Final step: sorted data [2, 4, 5, 7, 9, 12]
+</h2>
+<img class="jessie" src="selection1.jpg"/>
+<h2 class="cherry">
+For line 1, the function selection sort is defined, array and its length should be input.</br>
+For line 3, the variable i and j are used to control the loop, min is the minimum number.</br>
+For line 4, a for loop is created when i = 0 which is the first data to be sorted.</br>
+For line 6, we assume the first data is the smallest data so min = i.</br>
+For line 7, a for loop is created, we start to compare the assumed smallest data (min) with the data after it (j). j++ means after the loop the data after the compared data will be used to compare the assumed smallest data. when j = n, all data are compared, so we need j &lt; n.</br>
+For line 9, if the compared data j is smaller than the assumed smallest data min. We will assume the compared data to become the new smallest data (min = j).</br>
+For line 11, we swap the real smallest data and the compared data. (assume the swap function is written already)</br>
+For line 12, we print the sorted data.
+
+</h2>
+<img class="jessie" src="selection2.jpg"/>
+<h2 class="cherry">When the array [15, 5, 2, 7, 12, 6, 1, 4, 3, 9, 8, 10] which length is 12.</br>
+    The output will become:
+    </h2>
+<img class="jessie" src="selection3.jpg"/>
+<h2 class="cherry">
+    To sum up, selection sort has a similar speed with insertion sort (the time complexity is also O(n^2)). However, the problem of comparatively lower stability may occur when using selection sort. The problem can be solved by adding extra conditions when coding the selection sorts.
+</h2>
+</div>
+</body>
+
+<footer>
+        We've upload our codes to GitHub:<a href="https://github.com/caijihou/Cityu-CS1102-Group21">https://github.com/caijihou/Cityu-CS1102-Group21</a></br>
+        Members:</br>
+        Tsang Yee Ki Cherry (55684550)</br>
+        Ng tsz ying (56746486)</br>
+        ZHANG Jianyuan (57855500)</br>
+        LAI Wing Lok (57142166)</br>
+</footer>
+
+</html>
